@@ -2,7 +2,7 @@ package com.Bridgelabz;
 
 import java.util.Scanner;
 
-public class LineComparisonProblemUC2 {
+public class LineComparisonProblemUC3 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -30,15 +30,17 @@ public class LineComparisonProblemUC2 {
         double length1 = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
         double length2 = Math.sqrt((x4 - x3) * (x4 - x3) + (y4 - y3) * (y4 - y3));
 
-        System.out.println("Length of the line between points " + "(" + x1 + "," + y1 + ")," +
+        System.out.println("Length of the first line between points " + "(" + x1 + "," + y1 + ")," +
                 "(" + x2 + "," + y2 + ") = " + length1);
-        System.out.println("Length of the line between points " + "(" + x3 + "," + y3 + ")," +
+        System.out.println("Length of the second line between points " + "(" + x3 + "," + y3 + ")," +
                 "(" + x4 + "," + y4 + ") = " + length2);
 
         if (length1 == length2) {
             System.out.println("Both lines are equal!!");
-        }else{
-            System.out.println("Both lines are not equal!!");
+        }else if (length1 > length2){
+            System.out.println("First line is greater than Second line!!");
+        }else if (length2 > length1) {
+            System.out.println("Second line is greater than First line!!");
         }
     }
 }
